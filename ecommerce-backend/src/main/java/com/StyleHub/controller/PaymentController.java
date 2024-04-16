@@ -97,6 +97,8 @@ public class PaymentController {
 		Order order=orderService.findOrderById(orderId);
 		RazorpayClient razorpay = new RazorpayClient(apiKey, apiSecret);
 		
+		System.out.println("payment Id: " +paymentId+ "Order Id: " + orderId);
+		
 		try {
 			
 			Payment payment = razorpay.payments.fetch(paymentId);
