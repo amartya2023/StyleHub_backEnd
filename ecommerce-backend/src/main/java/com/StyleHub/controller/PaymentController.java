@@ -54,7 +54,7 @@ public class PaymentController {
 			RazorpayClient razorpay=new RazorpayClient(apiKey, apiSecret);
 			
 			JSONObject paymentLinkRequest = new JSONObject();
-			paymentLinkRequest.put("amount", order.getTotalPrice()*100);
+			paymentLinkRequest.put("amount", order.getTotalDiscountedPrice()*100);
 			paymentLinkRequest.put("currency", "INR");
 			
 			JSONObject customer = new JSONObject();
