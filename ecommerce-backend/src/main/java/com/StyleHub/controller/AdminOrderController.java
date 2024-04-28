@@ -31,7 +31,7 @@ public class AdminOrderController {
 		return new ResponseEntity<List<Order>>(orders, HttpStatus.ACCEPTED);
 	}
 	
-	@PutMapping("/{orderid}/confirmed")
+	@PutMapping("/{orderId}/confirmed")
 	public ResponseEntity<Order> ConfirmOrderHandler(@PathVariable Long orderId, 
 			@RequestHeader("Authorization") String jwt) throws OrderException {
 		
